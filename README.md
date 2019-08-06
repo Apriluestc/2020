@@ -1,3 +1,7 @@
+---
+title: 应战秋招指南！
+---
+
 # 2020 届秋招笔经面经及个人总结
 
 [![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/doc/README.md)
@@ -36,4 +40,4 @@
 
 ## 贡献
 
-- [如何贡献请参考](https://github.com/Apriluestc/algorithms/blob/master/usage/fork.md)
+- [如何贡献请参考](https://github.com/Apriluestc/2020/blob/master/fork.md)
