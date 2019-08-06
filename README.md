@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/doc/README.md)
 [![](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
+[![](https://img.shields.io/badge/build-issue-brightgreen)](https://github.com/Apriluestc/2020/issues)
 
 ## [Apriluestc](http://39.107.70.253:20000/)
 
@@ -17,4 +18,5 @@
 
 ## 致谢
 
-欢迎大家 star .
+欢迎大家 star . Thanks
+## 贡献
