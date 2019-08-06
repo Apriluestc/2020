@@ -1,7 +1,7 @@
 # 2020 届秋招笔经面经及个人总结
 
-![[](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/doc/README.md)
-![[](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
+[![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/doc/README.md)
+[![](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
 
 ## [Apriluestc](http://39.107.70.253:20000/)
 
