@@ -35,3 +35,5 @@
 欢迎大家 star . Thanks
 
 ## 贡献
+
+- [如何贡献请参考](https://github.com/Apriluestc/algorithms/blob/master/usage/fork.md)
