@@ -9,6 +9,7 @@ git add 2020秋招笔经/
 git add 剑指offer/
 git add doc/
 git add 项目/
+git add issue/
 git add pics/
 git commit -m "2020 届秋招笔试面试经验合集"
 git push
