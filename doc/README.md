@@ -2,7 +2,7 @@
 
 - C/C++
 
-- 数据结构
+- [数据结构](https://github.com/Apriluestc/2020/blob/master/doc/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md)
 
 - 算法
 
