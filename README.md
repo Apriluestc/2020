@@ -30,7 +30,7 @@ title: 应战秋招指南！
 
 - [shell](https://github.com/Apriluestc/2020/blob/master/doc/shell/README.md)
 
-- [项目]()
+- [项目](https://github.com/Apriluestc/2020/blob/master/%E9%A1%B9%E7%9B%AE/README.md)
 
 ## 致谢
 
