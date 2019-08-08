@@ -45,6 +45,26 @@ int eventfd(unsigned int initval, int flags);
 将其写入文件中，具体来说，当 CurrentBuffer 写满时，先将 CurrentBuffer 中的消息存入 Buffer 中，在交换 CurrentBuffer 和 NextBuffer，这样
 前端就可以继续往 CurrentBuffer 中写新的日志消息， 最后再调用 notify_all 通知后端将其写入文件
 
+**标准 IO 和文件 IO 的区别**
+
+文件 IO：文件 IO 也被称为不带缓存的 IO，不带缓存指的是每个 read、write 都调用内核中的一个系统调用，也就是低级 IO --操作系统提供的 IO 操作，与 OS 绑定。特定与 Linux 和 Unix 平台
+
+标准 IO：标准 IO 是一个便准函数包和 stdio.h 头文件的定义，具有一定的可以移植性，有缓存，标准 IO 提供了三种类型的缓存
+
+- 全缓存：当填满标准 IO 缓冲区才进行实际的 IO 操作
+- 行缓存：当输入或输出中遇到换行符时，标准 IO 执行 IO 操作
+- 不带缓存：stderr 便是
+
+**区别**
+
+文件 IO 又称为低级磁盘 IO，其进行读写文件时，每次操作都会与系统调用绑定，这样处理的好处是直接读写文件，坏处是系统调用会直接增加系统开销，标准 IO 可以看成是
+在文件 IO 的基础上封装了缓冲机制，先读写缓冲区，必要时再访问实际文件，从而减少系统调用的次数，文件 IO 中用文件描述符表现为一个打开的文件，可以访问不同类型的文件，如普通文件、设备文件等，
+而标准 IO 中用 FILE 流标识一个打开的文件，通常只访问普通文件
+
+标准 IO 函数：fopen、fclose、fread、fwrite、fputs等
+
+文件 IO 函数：open、close、read、write
+
 ### 什么是优雅关闭连接？
 
 所谓优雅关闭连接就是(就是 read() 到 0，要透明的传递这个行为而不是直接暴力 close())，一般情况下我们使用 close() 来关闭套接字，
@@ -60,6 +80,56 @@ epoll 有 EPOLLLT 和 EPOLLET 两种触发模式，LT 是默认的模式，ET �
 否还有数据可读。所以在 ET 模式下，read 一个 fd 的时候一定要把它的 buffer 读光，也就是说一直读到 read 的返回值小于请求值，或者 遇到 EAGAIN 错误
 
 ### Epoll 为什么高效，相较于 select、poll？
+
+#### select
+
+- select 模型：因为一个进程打开的 fd 是有限制的，由 FD_SETSIZE 设置，默认是 1024，因此 select 模型的最大并发数就被相应的限制了
+
+- 效率问题：select 每次调用都会线性扫描全部 fd 集合，效率呈线性下降，如果将 FD_SETSIZE 改大，可能会造成 fd 超时
+
+- 内核/用户空间拷贝问题：select 采用了内存拷贝，无论 poll、select、epoll 都要把 fd 消息通知给用户空间，而 select 和 poll 都采用内存拷贝，显然效率低下
+
+#### poll
+
+- poll解决了 select 最大并发限制，但是 select 的效率问题和拷贝问题却依然存在
+
+#### epoll
+
+- 拷贝问题：epoll 通过内核与用户空间的 mmap 同一块内存实现，这样就避免了大量的 fd 跨空间拷贝，即避免了不必要的拷贝
+
+- epoll 支持打开大数目 fd，具体数目 `cat /proc/sys/fs/file-max`
+
+- epoll-API：
+  
+  - epoll_create，创建 epoll 句柄
+  - epoll_ctl，事件注册函数
+  - epoll_wait，收集 epoll 监控的事件中已发送的事件
+
+**epoll 为什么高效**
+
+- 从 API 调用方式来看，select/poll 每次都要传递索要监控的 fd 集合给 select/poll 系统调用(这意味着将所有的 fd 跨空间拷贝，耗时)，而每次调用 epoll_wait 时(相当于调用 select/poll)，
+不需要传递 fd 给内核，只需要进行增量式操作，所以在 epoll_create 之后，内核已经在内核态开始准备数据结构存放监控的 fd 了，每次调用 epoll_ctl 时只是对这个数据结构进行简单的维护
+
+- 此外，内核使用了 slab 机制，为 epoll 提供了快速的数据结构，在内核里一切皆文件，所以 epoll 向内核注册了一个文件系统，用于存储被监控的 fd，当调用 epoll_create 时，就会在这个虚拟的 epoll 文件系统里，
+创建一个 file 节点，当然这个 file 不是普通文件，它只服务于 epoll，epoll在被内核初始化时(操作系统启动)，同时会开辟出 epoll 自己的内核高速 cache 区，用于安置每一个我们想监控的 fd，这
+些 fd 会以红黑树的形式保存在内核 cache 里，以支持快速的查找、插入、删除，在这个内核高速 cache 区，就是建立连续的物理内存页，然后在之上建立 slab 层，简单地说，就是物理上分配好你想要的 size 的内存对象，
+每次使用时都是使用空闲的已分配好的对象
+
+- 当我们调用 epoll_ctl 往里塞入百万 fd 时，epoll_wait 仍能飞快的返回，并有效的将发生事件的 fd 给我们用户，这是由于我们在调用 epoll_create 时，内核除了帮我们在 epoll 文件系统里创建 file 节点，在内核 cache 区建
+了个红黑树用于存储 epoll_ctl 传来的 fd，还会建立一个 list 链表，用于存储准备就绪的事件，当 epoll_wait 调用时，仅仅观测 list 有无数据即可，有数据返回，无数据 sleep，等到 timeout 事件页返回，通常情况下我们要监控百万计的 fd，
+大多一次也只返回少量的 fd，所以 epoll_wait 仅需要从内核态拷贝少量 fd 到用户态，那么如何维护这个就绪的 list 链表，当我们执行 epoll_ctl 时，除了把 fd 放到 epoll 文件系统 file 对象对应的红黑树之外，还会给内核中断处理程序注册一个 CallBack，
+告诉内核，如果这个 fd 到了，就把他放到就绪 list 中
+
+#### 总结
+
+**如此，一颗红黑树，一张准备就绪的 list 链表，少量的内核 cache，就帮我们解决了高并发下的 fd 处理问题**
+
+**执行 epoll_create 时创建红黑树和就绪 list 链表**
+
+**执行 epoll_ctl 时，如果增加 fd，则检查在红黑树中是否存在，存在立即返回，否则添加，然后向内核注册回调函数，用于当中断事件来临时向 list 中插入数据**
+
+**执行 epoll_wait 时立即返回就绪 list 中的数据**
+
 ### HTTP 报文有哪些字段？
 
 **通用首部字段**
