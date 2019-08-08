@@ -90,6 +90,8 @@
 
 MyISAM 中索引检索的算法为首先按照 B+Tree 搜索算法搜索索引，如果指定的 Key 存在，则取出其 data 域的值，然后以 data 域的值为地址，读取相应数据记录。
 
+【MyISAM】![](https://github.com/Apriluestc/2020/blob/master/pics/myisam.png)
+
 **InnoDB**
 
 对于 InnoDB 来说，表数据文件本身就是按 B+Tree 组织的一个索引结构，这棵树的叶节点 data 域保存了完整的数据记录。
@@ -97,6 +99,8 @@ MyISAM 中索引检索的算法为首先按照 B+Tree 搜索算法搜索索引�
 由于 InnoDB 利用的数据库主键作为索引 Key，所以 InnoDB 数据表文件本身就是主索引，且因为 InnoDB 数据文件需要
 按照主键聚集，所以使用 InnoDB 作为数据引擎的表需要有个主键，如果没有显式指定的话 MySQL 会尝试自动选择一个可以
 唯一标识数据的列作为主键，如果无法找到，则会生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。
+
+【InnoDB】[](https://github.com/Apriluestc/2020/blob/master/pics/innodb.png)
 
 #### b 树和 b+ 树
 
