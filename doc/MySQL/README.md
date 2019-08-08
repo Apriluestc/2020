@@ -1,5 +1,11 @@
 # MySQL
 
+* [三范式](#三范式)
+* [Sql 优化](#sql-优化)
+* [索引及索引优化](#索引及索引优化)
+* [事务](#事务)
+* [存储引擎](#存储引擎)
+
 ### 三范式
 
 - 第一范式：列的原子性，列不可分割
@@ -100,7 +106,7 @@ MyISAM 中索引检索的算法为首先按照 B+Tree 搜索算法搜索索引�
 按照主键聚集，所以使用 InnoDB 作为数据引擎的表需要有个主键，如果没有显式指定的话 MySQL 会尝试自动选择一个可以
 唯一标识数据的列作为主键，如果无法找到，则会生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。
 
-【InnoDB】[](https://github.com/Apriluestc/2020/blob/master/pics/innodb.png)
+【InnoDB】![](https://github.com/Apriluestc/2020/blob/master/pics/innodb.png)
 
 #### b 树和 b+ 树
 
