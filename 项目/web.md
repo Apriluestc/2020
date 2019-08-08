@@ -130,6 +130,8 @@ epoll 有 EPOLLLT 和 EPOLLET 两种触发模式，LT 是默认的模式，ET �
 
 **执行 epoll_wait 时立即返回就绪 list 中的数据**
 
+![Add img](https://github.com/Apriluestc/2020/tree/master/pics/epoll.png)
+
 ### HTTP 报文有哪些字段？
 
 **通用首部字段**
