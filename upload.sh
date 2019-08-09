@@ -7,6 +7,7 @@ git add .github/
 git add 2020秋招面经/
 git add 2020秋招笔经/
 git add 剑指offer/
+git add 2020届秋招笔试编程题集/
 git add doc/
 git add 项目/
 git add issue/
