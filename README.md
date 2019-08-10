@@ -39,3 +39,17 @@ title: 应战秋招指南！
 ## 贡献
 
 - [如何贡献请参考](https://github.com/Apriluestc/2020/blob/master/fork.md)
+
+## 友情链接
+
+- [技术面试必备基础知识 @Cyc2018](https://github.com/CyC2018/CS-Notes)
+
+- [C/C++ 技术面试基础知识总结 @huitui](https://github.com/huihut/interview)
+
+- [SGI-STL 源码剖析 @steveLauwh](https://github.com/steveLauwh/SGI-STL)
+
+- [leetcode 题解 $java 语言版 @MisterBooo](https://github.com/MisterBooo/LeetCodeAnimation)
+
+- [leetcode 题解 $go 语言版 @aQuaYi](https://github.com/aQuaYi/LeetCode-in-Go)
+
+- [极客博客首选 PS：对于搭建个人博客、网页素材首选 @kitian616](https://github.com/kitian616/jekyll-TeXt-theme)
