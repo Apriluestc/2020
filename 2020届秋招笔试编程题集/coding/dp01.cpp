@@ -18,6 +18,7 @@ using namespace std;
  *
  * 24
  *
+ * dp[i][j] 表示放入第 i 件物品在背包容量是 j 的情况下产生的最佳价值
  * */
 
 int main()

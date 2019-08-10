@@ -16,6 +16,8 @@ using namespace std;
  *
  * dp A 或者 D 或者 C
  *
+ * dp[i][j] 表示以字符串 A[i] 结尾，以 B[j] 结尾产生的最长子序列
+ *
  * */
 
 int main()
