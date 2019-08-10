@@ -1,6 +1,6 @@
 # 2020 届秋招笔试编程题集
 
-### 背包问题
+### 【背包问题】
 
 **【对于背包问题而言】** 定义物品种类为 N，背包容量 C，W[i] 对应第 i 件物品的体积或者花费或者重量，V[i] 对应第 i 件物品的价值
 
@@ -9,3 +9,8 @@
 - [完全背包](https://github.com/Apriluestc/2020/blob/master/2020%E5%B1%8A%E7%A7%8B%E6%8B%9B%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98%E9%9B%86/coding/dp03.cpp)
 - [完全背包【方案数问题】](https://github.com/Apriluestc/2020/blob/master/2020%E5%B1%8A%E7%A7%8B%E6%8B%9B%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98%E9%9B%86/coding/dp05.cpp)
 - [多重背包](https://github.com/Apriluestc/2020/blob/master/2020%E5%B1%8A%E7%A7%8B%E6%8B%9B%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98%E9%9B%86/coding/dp04.cpp)
+
+### 【LCS 问题】
+
+- [最长公共子序列](https://github.com/Apriluestc/2020/blob/master/2020%E5%B1%8A%E7%A7%8B%E6%8B%9B%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98%E9%9B%86/coding/dp06.cpp)
+- [最长公共子串](https://github.com/Apriluestc/2020/blob/master/2020%E5%B1%8A%E7%A7%8B%E6%8B%9B%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98%E9%9B%86/coding/dp07.cpp)
