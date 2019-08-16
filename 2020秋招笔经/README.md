@@ -3,6 +3,7 @@
 * [实现生产者消费者模型](#实现生产者消费者模型)
 * [实现 LRU](#实现-lru)
 * [线程安全的单例模式](#线程安全的单例模式)
+* [实现 string 类](#实现-string-类)
 
 ### 实现生产者消费者模型
 
@@ -188,3 +189,5 @@ pthread_once_t Singleton<T>::once_ = PTHREAD_ONCE_INIT;
 template<typename T>
 T* Singleton<T>::value_ = nullptr;
 ```
+
+### 实现 string 类
