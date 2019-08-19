@@ -4,7 +4,7 @@ title: Apriluestc's projects
 
 ### 基于 UDP socket 的聊天室
 
-URL：https://github.com/Apriluestc/web.d
+URL：https://github.com/Apriluestc/op.im
 
 本项目为 C++ 编写的多人聊天室，使用 UDP socket 进行通信，支持多人聊天、支持语音聊天
 
@@ -75,7 +75,7 @@ URL：https://github.com/Apriluestc/compress
 
 URL：https://github.com/Apriluestc/Jarvis
 
-������ Linux 智能语音 Ai 工具 Jarvis，该项目基于百度语音开源 SDK & 图灵机器
+������ Linux 智能语音 Ai 工具 Jarvis，该项目基于百度语音开源 SDK & 图灵机器
 人搭建的，目前没有接入微信平台(ps：很简单的一个项目，主要用于练习开源库、开源接口的使用)
 
 **项目功能**
