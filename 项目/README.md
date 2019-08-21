@@ -4,6 +4,8 @@ title: Apriluestc's projects
 
 ### 调试技巧
 
+VS2017 调试、gdb 调试，包含断点调试、单步调试、查看函数调用栈信息等
+
 URL：https://github.com/Apriluestc/2020/blob/master/%E9%A1%B9%E7%9B%AE/debug.md
 
 ### 基于 UDP socket 的聊天室
