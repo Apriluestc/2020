@@ -36,6 +36,8 @@ Ctrl + Shift + F5
 
 可以在调用堆栈上双击可以看到改代码的位置，有键可以做其他操作，比如运行到光标处
 
+![Add image](https://github.com/Apriluestc/2020/blob/master/pics/debug.png)
+
 #### gdb 调试技巧
 
 - 简单命令
