@@ -2,6 +2,10 @@
 title: Apriluestc's projects
 ---
 
+### 调试技巧
+
+URL：https://github.com/Apriluestc/2020/blob/master/%E9%A1%B9%E7%9B%AE/debug.md
+
 ### 基于 UDP socket 的聊天室
 
 URL：https://github.com/Apriluestc/op.im
