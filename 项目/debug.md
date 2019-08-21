@@ -90,3 +90,11 @@ Ctrl + Shift + F5
     ```
 
 - 设置捕点
+
+  - 当 event 发生时，catch <event> 暂停程序，event 可能是如下
+  - throw 一个 C++ 抛出的异常
+  - catch 一个 C++ 捕捉到的异常
+  - exec 调用系统调用 exec 时
+  - fork 调用系统调用 fork 时
+  - vfork 调用系统调用 vfork 时
+  - 只设置一次捕捉点，当程序停住以后，对应自动删除
