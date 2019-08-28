@@ -45,8 +45,6 @@ URL：https://github.com/Apriluestc/web.d
 - 异步日志实时记录服务器运行状态(便于 Debug)
 - webd 服务以 dameon 进程运行
 
-[面试问题](https://github.com/Apriluestc/2020/blob/master/%E9%A1%B9%E7%9B%AE/web.md)
-
 ### 文件压缩
 
 URL：https://github.com/Apriluestc/compress
