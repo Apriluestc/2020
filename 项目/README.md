@@ -2,6 +2,12 @@
 title: Apriluestc's projects
 ---
 
+### git 命令
+
+包括代码上传，分支管理，用户信息配置
+
+URL：https://github.com/Apriluestc/2020/blob/master/doc/%E5%85%B6%E4%BB%96/git%E5%91%BD%E4%BB%A4.md
+
 ### 调试技巧
 
 VS2017 调试、gdb 调试，包含断点调试、单步调试、查看函数调用栈信息等
