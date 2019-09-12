@@ -1,5 +1,7 @@
 # 2020 届秋招面经
 
+**【感觉自己好菜，觉悟太晚，拿不到 offer 泪奔泪奔】**
+
 - [浙江大华提前批：8.5 大数据岗](https://github.com/Apriluestc/2020/blob/master/2020%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/%E5%A4%A7%E5%8D%8E%E9%9D%A2%E7%BB%8F.md)
 - [哔哩哔哩提前批：8.5 推荐系统研发](https://github.com/Apriluestc/2020/blob/master/2020%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E9%9D%A2%E7%BB%8F.md)
 - [有赞秋招：8.11 免笔试 运维【已拿 offer】](https://github.com/Apriluestc/2020/blob/master/2020%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/%E6%9C%89%E8%B5%9E%E9%9D%A2%E7%BB%8F.md)
