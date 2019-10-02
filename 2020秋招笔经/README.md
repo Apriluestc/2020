@@ -189,5 +189,3 @@ pthread_once_t Singleton<T>::once_ = PTHREAD_ONCE_INIT;
 template<typename T>
 T* Singleton<T>::value_ = nullptr;
 ```
-
-### 实现 string 类
