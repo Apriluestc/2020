@@ -1,5 +1,5 @@
-test : test.cpp
-	g++ $^ -o $@
+test : bfs.cpp
+	g++ $^ -o $@ -g
 
 .PHONY :
 
