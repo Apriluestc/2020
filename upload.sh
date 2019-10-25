@@ -5,6 +5,7 @@ git add g.md
 git add .gitignore
 git add upload.sh
 git add .github/
+git add km/
 git add 2020秋招面经/
 git add 2020秋招笔经/
 git add 剑指offer/
