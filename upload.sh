@@ -1,5 +1,6 @@
 #!/bin/bash
 git add README.md
+git add file
 git add fork.md
 git add g.md
 git add .gitignore
