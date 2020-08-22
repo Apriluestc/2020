@@ -4,7 +4,7 @@ title: 应战秋招指南！
 
 # 2020 届秋招笔经面经及个人总结
 
-[![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/doc/README.md)
+[![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/README.md)
 [![](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
 [![](https://img.shields.io/badge/build-issue-brightgreen)](https://github.com/Apriluestc/2020/issues)
 
