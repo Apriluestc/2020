@@ -38,7 +38,7 @@ title: 应战秋招指南！
 
 ## 贡献
 
-- [如何贡献请参考](https://github.com/Apriluestc/2020/blob/master/fork.md)
+- [如何贡献请参考](https://github.com/Apriluestc/2020/blob/master/blog/fork.md)
 
 ## 友情链接
 
