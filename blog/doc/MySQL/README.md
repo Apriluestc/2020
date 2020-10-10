@@ -110,4 +110,4 @@ MyISAM 中索引检索的算法为首先按照 B+Tree 搜索算法搜索索引�
 
 #### b 树和 b+ 树
 
-【原理】https://github.com/Apriluestc/2020/blob/master/doc/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#b-%E6%A0%91b-%E6%A0%91
+【原理】https://github.com/Apriluestc/2020/blob/blog/master/doc/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#b-%E6%A0%91b-%E6%A0%91
