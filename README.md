@@ -8,7 +8,7 @@ title: 应战秋招指南！
 [![](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
 [![](https://img.shields.io/badge/build-issue-brightgreen)](https://github.com/Apriluestc/2020/issues)
 
-- [博客](https://github.com/Apriluestc/2020/blob/master/blog/README.md)
+- [博客【2020 😀😁😀😁😀 秋招笔试面试合集，以及2019届公司真题模拟题集 & 附上自己的后端指南，💻🎓包括（C/C++基础、数据结构、算法、操作系统💻、计算机网络、MySQL、shell（ps：sed、awk、grep））】](https://github.com/Apriluestc/2020/blob/master/blog/README.md)
 - [项目](https://github.com/Apriluestc/2020/blob/master/blog/%E9%A1%B9%E7%9B%AE/README.md)
 
 ## 致谢
