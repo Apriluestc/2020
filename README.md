@@ -6,7 +6,7 @@ title: 应战秋招指南！
 
 [![](https://img.shields.io/badge/notes-protect-blue)](https://github.com/Apriluestc/2020/blob/master/README.md)
 [![](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Apriluestc/2020/blob/master/README.md)
-[![](https://img.shields.io/badge/build-issue-brightgreen)](https://github.com/Apriluestc/2020/blog/issues)
+[![](https://img.shields.io/badge/build-issue-brightgreen)](https://github.com/Apriluestc/2020/issues)
 
 - [博客](https://github.com/Apriluestc/2020/blob/master/blog/README.md)
 - [项目](https://github.com/Apriluestc/2020/blob/master/blog/%E9%A1%B9%E7%9B%AE/README.md)
